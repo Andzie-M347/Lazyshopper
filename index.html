@@ -15,32 +15,56 @@
         <div class="container">
             <nav class="site-navigation">
                 <a href="javascript:;" class="site-navigation__logo" title="Lazy Shopper - Everyday . Couch . Shopping">
-                    <img src="assets/img/logo.svg" alt="" width="274" height="84"> 
+                    <img src="assets/img/logo.svg" alt="" width="274" height="84">
                 </a>
                 <div class="site-navigation__menu">
                     <ul>
-                        <li>Home</li>
-                        <li>shop</li>
-                        <li class="site-navigation__menu--lightbox">
+                        <li>
+                            <a href="javascript:;
+                            " class="site-navigation__menu--link">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;
+                            " class="site-navigation__menu--link">Shop</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="site-navigation__menu--link" id="lightbox">
                             <svg>
                                 <use href="assets/fonts/symbol-defs.svg#icon-search"></use>
                             </svg>
+                        </a>
                         </li>
                     </ul>
                 </div><!-- ./Navigation menu -->
-                <div class="site-navigation__user">
+                <div class="site-user">
                     <ul>
-                        <li>Login</li>
-                        <!-- <li>Basket </li> -->
+                       
                         <li>
-                            <svg>
-                                <use href="assets/fonts/symbol-defs.svg#icon-shopping-bag"></use>
-                            </svg>
+                            <span class="site-user__link--box">
+                                <a href="javascript:;" class="site-user__link">
+                                    <svg>
+                                        <use href="assets/fonts/sprides1.0.svg#icon-profile-male"></use>
+                                    </svg>
+                                </a>
+                            </span>
+                            
                         </li>
                         <li>
-                            <svg>
-                                <use href="assets/fonts/symbol-defs.svg#icon-heart"></use>
-                            </svg>
+                            <a href="javascript:;" class="site-user__link">
+                                
+                                    <svg>
+                                        <use href="assets/fonts/sprides1.0.svg#icon-basket"></use>
+                                    </svg>
+                                <span class="items-count">0</span>
+                            </a>  
+                        </li>
+                        <li>
+                            <a href="javascript:;" class="site-user__link">
+                                <svg>
+                                    <use href="assets/fonts/sprides1.0.svg#icon-heart"></use>
+                                </svg>
+                                <span class="items-count">0</span>
+                            </a>  
                         </li>
                     </ul>
                 </div>
@@ -48,19 +72,34 @@
         </div>
     </header>
 
+    <section class="banner-section"> 
+        <div class="container">
+            <div class="content">
+                <div class="flip-text">
+                    <h3 class="flip-text__alt-text">Winter is finally here </h3>
+
+                    <h1 class="flip-text__title">
+                        <span class="flip-text__title--large">great saving</span>
+                        <span class="flip-text__title--small">and free shipping</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="site-footer">
 
     </footer>
 
 
-    <div class="news-letter">
+    <!-- <div class="news-letter">
         <form>
             ...Form
         </form>
 
         <a href="javascript:;" class="close-btn">&#10006;</a>
-    </div>
-   
+    </div> -->
+
 
     <!-- <script src="assets/js/main.js"></script> -->
 

@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+// COLORS
+$accent-color: #f9a629;
+$text-color-light: rgba(102, 102, 102, 0.85);
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+// SITE RESET
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: $text-color-light;
+    box-sizing: border-box;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1080px;
+}
+
+
+li {
+    list-style: none;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+// HEADER
+
+
+.site-header {
+    height: 8.4rem;
+
+    #lightbox {
+        background: $accent-color;
+        width: 32px;
+        height: 32px;
+       vertical-align: middle;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        
+
+
+        svg {
+            fill: #fff;
+            margin: 5px;
+        }
+    }
+
+
+    li {
+        display: inline-block;
+        padding: 0 15px;
+
+        
+    
+
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .site-navigation {
+        display: flex;
+        align-items: center;
+
+        &__logo {
+            margin-right: 30px;
+        }
+
+        &__menu {
+            flex: 1;
+        }
+
+        a {
+            transition: all .2s;
+            color: $text-color-light;
+            font-weight: 600;
+            font-size: 1.35rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .site-user {
+        li {
+            padding: 0 3px;
+
+            &:first-of-type {
+                margin-right: 10px;
+            }
+
+            // &:nth-child(2) {
+            //     border-left: 1px solid currentColor;
+            //     margin-left: 15px
+            // }
+        }
+
+        &__link {
+            &--box {
+                // border: 1px solid #222;
+                // height: 26px;
+                // line-height: 26px;
+                // width: 26px;
+                // border-radius: 50%;
+                // text-align: center;
+                // display: inline-block;
+            }
+        }
+    }
+}
+
+
+// BANNER SECTION
+.banner-section {
+    padding-top: 500px;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: relative;
+
+    // Content
+    .flip-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        &__alt-text {
+            font-family: 'Dancing Script', cursive;  
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        &__title {
+            color: $accent-color;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 15px 0;
+            letter-spacing: .05rem;
+
+            &--large {
+                font-size: 9rem;
+                line-height: 9rem;
+                display: block;
+                margin-bottom: 1.1rem;
+            }
+
+            &--small {
+                font-size: 5.6rem;
+                line-height: 5.6rem;
+                margin-bottom: 1.1rem;
+            }
+        }
+    }
+}

@@ -1,4 +1,9 @@
+
 {
+
+  "scripts": {
+    "sass": "node-sass assets/sass/main.scss assets/css/main.css -watch"
+  },
   "devDependencies": {
     "node-sass": "^6.0.0"
   }

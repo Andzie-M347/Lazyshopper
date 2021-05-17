@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-/* line 9, assets/sass/main.scss */
 *,
 *::before,
 *::after {
@@ -8,18 +7,15 @@
   margin: 0;
   padding: 0; }
 
-/* line 19, assets/sass/main.scss */
 html {
   font-size: 62.5%; }
 
-/* line 23, assets/sass/main.scss */
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   color: rgba(102, 102, 102, 0.85);
   box-sizing: border-box; }
 
-/* line 30, assets/sass/main.scss */
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -27,17 +23,13 @@ body {
   padding-right: 15px;
   max-width: 1080px; }
 
-/* line 39, assets/sass/main.scss */
 li {
   list-style: none; }
-  /* line 42, assets/sass/main.scss */
   li a {
     text-decoration: none; }
 
-/* line 50, assets/sass/main.scss */
 .site-header {
   height: 8.4rem; }
-  /* line 53, assets/sass/main.scss */
   .site-header #lightbox {
     background: #f9a629;
     width: 32px;
@@ -46,43 +38,33 @@ li {
     text-align: center;
     border-radius: 50%;
     display: inline-block; }
-    /* line 64, assets/sass/main.scss */
     .site-header #lightbox svg {
       fill: #fff;
       margin: 5px; }
-  /* line 71, assets/sass/main.scss */
   .site-header li {
     display: inline-block;
     padding: 0 15px; }
-    /* line 78, assets/sass/main.scss */
     .site-header li svg {
       height: 20px;
       width: 20px; }
-  /* line 84, assets/sass/main.scss */
   .site-header .site-navigation {
     display: flex;
     align-items: center; }
-    /* line 88, assets/sass/main.scss */
     .site-header .site-navigation__logo {
       margin-right: 30px; }
-    /* line 92, assets/sass/main.scss */
     .site-header .site-navigation__menu {
       flex: 1; }
-    /* line 96, assets/sass/main.scss */
     .site-header .site-navigation a {
       transition: all .2s;
       color: rgba(102, 102, 102, 0.85);
       font-weight: 600;
       font-size: 1.35rem;
       text-transform: uppercase; }
-  /* line 106, assets/sass/main.scss */
   .site-header .site-user li {
     padding: 0 3px; }
-    /* line 109, assets/sass/main.scss */
     .site-header .site-user li:first-of-type {
       margin-right: 10px; }
 
-/* line 135, assets/sass/main.scss */
 .banner-section {
   padding-top: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
@@ -90,34 +72,29 @@ li {
   background-repeat: no-repeat;
   background-position: bottom;
   position: relative; }
-  /* line 144, assets/sass/main.scss */
   .banner-section .flip-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-    /* line 151, assets/sass/main.scss */
     .banner-section .flip-text__alt-text {
       font-family: 'Dancing Script', cursive;
       font-size: 3.2rem;
       line-height: 3.2rem;
       color: #fff;
       font-weight: 400; }
-    /* line 159, assets/sass/main.scss */
     .banner-section .flip-text__title {
       color: #f9a629;
       text-transform: uppercase;
       font-weight: 700;
       margin: 15px 0;
       letter-spacing: .05rem; }
-      /* line 166, assets/sass/main.scss */
       .banner-section .flip-text__title--large {
         font-size: 9rem;
         line-height: 9rem;
         display: block;
         margin-bottom: 1.1rem; }
-      /* line 173, assets/sass/main.scss */
       .banner-section .flip-text__title--small {
         font-size: 5.6rem;
         line-height: 5.6rem;
