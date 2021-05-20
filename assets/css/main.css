@@ -81,44 +81,86 @@ li {
     /* line 109, assets/sass/main.scss */
     .site-header .site-user li:first-of-type {
       margin-right: 10px; }
+  /* line 115, assets/sass/main.scss */
+  .site-header .site-user__link--box {
+    border: 1px solid rgba(102, 102, 102, 0.85);
+    height: 26px;
+    line-height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block; }
 
-/* line 135, assets/sass/main.scss */
+/* line 130, assets/sass/main.scss */
 .banner-section {
-  padding-top: 500px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   position: relative; }
-  /* line 144, assets/sass/main.scss */
-  .banner-section .flip-text {
+  /* line 140, assets/sass/main.scss */
+  .banner-section .content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-    /* line 151, assets/sass/main.scss */
+  /* line 149, assets/sass/main.scss */
+  .banner-section .flip-text {
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1s;
+    animation-timing-function: linear;
+    backface-visibility: hidden;
+    animation-fill-mode: both; }
+    /* line 158, assets/sass/main.scss */
     .banner-section .flip-text__alt-text {
       font-family: 'Dancing Script', cursive;
       font-size: 3.2rem;
       line-height: 3.2rem;
       color: #fff;
       font-weight: 400; }
-    /* line 159, assets/sass/main.scss */
+    /* line 166, assets/sass/main.scss */
     .banner-section .flip-text__title {
       color: #f9a629;
       text-transform: uppercase;
       font-weight: 700;
       margin: 15px 0;
       letter-spacing: .05rem; }
-      /* line 166, assets/sass/main.scss */
+      /* line 173, assets/sass/main.scss */
       .banner-section .flip-text__title--large {
         font-size: 9rem;
         line-height: 9rem;
         display: block;
         margin-bottom: 1.1rem; }
-      /* line 173, assets/sass/main.scss */
+      /* line 180, assets/sass/main.scss */
       .banner-section .flip-text__title--small {
         font-size: 5.6rem;
         line-height: 5.6rem;
         margin-bottom: 1.1rem; }
+  /* line 192, assets/sass/main.scss */
+  .banner-section__patterns {
+    background-image: url("../img/pattern1.png"), url("../img/pattern2.png");
+    animation: pattern 10s linear infinite;
+    height: 500px;
+    position: relative;
+    top: 0;
+    left: 0; }
+
+@keyframes pattern {
+  100% {
+    background-position: -300px 1000px, 400px 400px, 300px 300px; }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px; } }
+
+@keyframes spin {
+  0% {
+    transform: perspective(0) rotateY(90deg);
+    opacity: 0; }
+  40% {
+    transform: perspective(0) rotateY(-20deg); }
+  70% {
+    transform: perspective(0) rotateY(20deg); }
+  100% {
+    transform: perspective(0) rotateY(0deg);
+    opacity: 1; } }

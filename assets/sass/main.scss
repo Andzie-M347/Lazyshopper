@@ -109,22 +109,17 @@ li {
             &:first-of-type {
                 margin-right: 10px;
             }
-
-            // &:nth-child(2) {
-            //     border-left: 1px solid currentColor;
-            //     margin-left: 15px
-            // }
         }
 
         &__link {
             &--box {
-                // border: 1px solid #222;
-                // height: 26px;
-                // line-height: 26px;
-                // width: 26px;
-                // border-radius: 50%;
-                // text-align: center;
-                // display: inline-block;
+                border: 1px solid $text-color-light;
+                height: 26px;
+                line-height: 26px;
+                width: 26px;
+                border-radius: 50%;
+                text-align: center;
+                display: inline-block;
             }
         }
     }
@@ -133,20 +128,32 @@ li {
 
 // BANNER SECTION
 .banner-section {
-    padding-top: 500px;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
+    // padding-top: 500px;
+     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
+    // z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
     position: relative;
+    // height: 500px;
 
-    // Content
-    .flip-text {
+    .content {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+    }
+
+    // Content
+    .flip-text {
+        animation-name: spin;
+        animation-duration: 1500ms; 
+        animation-iteration-count: 1s;
+        animation-timing-function: linear;
+        backface-visibility: hidden;
+        animation-fill-mode: both;
+        
 
         &__alt-text {
             font-family: 'Dancing Script', cursive;  
@@ -176,5 +183,53 @@ li {
                 margin-bottom: 1.1rem;
             }
         }
+
+
+     
+    }
+
+
+    &__patterns {
+        background-image: url("../img/pattern1.png"),
+        url("../img/pattern2.png");
+        animation: pattern 10s linear infinite;
+        // background-color: red;
+        height: 500px;
+
+        position: relative;
+        top: 0;
+        left: 0;
+
     }
 }
+
+
+@keyframes pattern {
+
+    100% {
+        background-position: -300px 1000px, 400px 400px, 300px 300px;
+    }
+
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+   
+}
+
+
+@keyframes spin {
+    0% {
+       transform: perspective(0) rotateY(90deg);
+       opacity: 0;
+    }
+    40% {
+       transform: perspective(0) rotateY(-20deg);
+    }
+    70% {
+       transform: perspective(0) rotateY(20deg);
+    }
+    100% {
+       transform: perspective(0) rotateY(0deg);
+       opacity: 1;
+    }
+ }
