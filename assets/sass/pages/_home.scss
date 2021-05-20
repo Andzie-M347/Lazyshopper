@@ -1,0 +1,15 @@
+.intro-section {
+    margin-top: 3rem;
+   
+
+    .lzs-rows {
+        display: flex;
+        justify-content: space-between;
+        &__column {
+           flex: 0 32%;
+           height: 100%;
+           background-color: $accent-color;
+        }
+       
+    }
+}

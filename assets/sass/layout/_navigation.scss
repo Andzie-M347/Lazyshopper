@@ -1,0 +1,78 @@
+
+.site-header {
+    height: 8.4rem;
+
+    #lightbox {
+        background: $accent-color;
+        width: 32px;
+        height: 32px;
+       vertical-align: middle;
+        text-align: center;
+        border-radius: 50%;
+        display: inline-block;
+        
+
+
+        svg {
+            fill: #fff;
+            margin: .5rem;
+        }
+    }
+
+
+    li {
+        display: inline-block;
+        padding: 0 1.5rem;
+
+        
+    
+
+        svg {
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    .site-navigation {
+        display: flex;
+        align-items: center;
+
+        &__logo {
+            margin-right: 3rem;
+        }
+
+        &__menu {
+            flex: 1;
+        }
+
+        a {
+            transition: all .2s;
+            color: $text-color-light;
+            font-weight: 600;
+            font-size: 1.35rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .site-user {
+        li {
+            padding: 0 3px;
+
+            &:first-of-type {
+                margin-right: 1rem;
+            }
+        }
+
+        &__link {
+            &--box {
+                border: 1px solid $text-color-light;
+                height: 2.6rem;
+                line-height: 2.6rem;
+                width: 2.6rem;
+                border-radius: 50%;
+                text-align: center;
+                display: inline-block;
+            }
+        }
+    }
+}

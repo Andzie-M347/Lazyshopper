@@ -1,5 +1,8 @@
+
+
+// alert('hello world')
 // Newsletter Modal
-let newsLetter = document.querySelector('.news-letter')
+let newsLetter = document.querySelector('.newsletter')
 let closeBtn = document.querySelector('.close-btn')
 
 window.addEventListener('load', function () {

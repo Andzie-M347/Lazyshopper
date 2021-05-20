@@ -1,152 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-/* line 9, assets/sass/main.scss */
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0; }
-
-/* line 19, assets/sass/main.scss */
-html {
-  font-size: 62.5%; }
-
-/* line 23, assets/sass/main.scss */
-body {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  color: rgba(102, 102, 102, 0.85);
-  box-sizing: border-box; }
-
-/* line 30, assets/sass/main.scss */
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 1080px; }
-
-/* line 39, assets/sass/main.scss */
-li {
-  list-style: none; }
-  /* line 42, assets/sass/main.scss */
-  li a {
-    text-decoration: none; }
-
-/* line 50, assets/sass/main.scss */
-.site-header {
-  height: 8.4rem; }
-  /* line 53, assets/sass/main.scss */
-  .site-header #lightbox {
-    background: #f9a629;
-    width: 32px;
-    height: 32px;
-    vertical-align: middle;
-    text-align: center;
-    border-radius: 50%;
-    display: inline-block; }
-    /* line 64, assets/sass/main.scss */
-    .site-header #lightbox svg {
-      fill: #fff;
-      margin: 5px; }
-  /* line 71, assets/sass/main.scss */
-  .site-header li {
-    display: inline-block;
-    padding: 0 15px; }
-    /* line 78, assets/sass/main.scss */
-    .site-header li svg {
-      height: 20px;
-      width: 20px; }
-  /* line 84, assets/sass/main.scss */
-  .site-header .site-navigation {
-    display: flex;
-    align-items: center; }
-    /* line 88, assets/sass/main.scss */
-    .site-header .site-navigation__logo {
-      margin-right: 30px; }
-    /* line 92, assets/sass/main.scss */
-    .site-header .site-navigation__menu {
-      flex: 1; }
-    /* line 96, assets/sass/main.scss */
-    .site-header .site-navigation a {
-      transition: all .2s;
-      color: rgba(102, 102, 102, 0.85);
-      font-weight: 600;
-      font-size: 1.35rem;
-      text-transform: uppercase; }
-  /* line 106, assets/sass/main.scss */
-  .site-header .site-user li {
-    padding: 0 3px; }
-    /* line 109, assets/sass/main.scss */
-    .site-header .site-user li:first-of-type {
-      margin-right: 10px; }
-  /* line 115, assets/sass/main.scss */
-  .site-header .site-user__link--box {
-    border: 1px solid rgba(102, 102, 102, 0.85);
-    height: 26px;
-    line-height: 26px;
-    width: 26px;
-    border-radius: 50%;
-    text-align: center;
-    display: inline-block; }
-
-/* line 130, assets/sass/main.scss */
-.banner-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  position: relative; }
-  /* line 140, assets/sass/main.scss */
-  .banner-section .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-  /* line 149, assets/sass/main.scss */
-  .banner-section .flip-text {
-    animation-name: spin;
-    animation-duration: 1500ms;
-    animation-iteration-count: 1s;
-    animation-timing-function: linear;
-    backface-visibility: hidden;
-    animation-fill-mode: both; }
-    /* line 158, assets/sass/main.scss */
-    .banner-section .flip-text__alt-text {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3.2rem;
-      line-height: 3.2rem;
-      color: #fff;
-      font-weight: 400; }
-    /* line 166, assets/sass/main.scss */
-    .banner-section .flip-text__title {
-      color: #f9a629;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin: 15px 0;
-      letter-spacing: .05rem; }
-      /* line 173, assets/sass/main.scss */
-      .banner-section .flip-text__title--large {
-        font-size: 9rem;
-        line-height: 9rem;
-        display: block;
-        margin-bottom: 1.1rem; }
-      /* line 180, assets/sass/main.scss */
-      .banner-section .flip-text__title--small {
-        font-size: 5.6rem;
-        line-height: 5.6rem;
-        margin-bottom: 1.1rem; }
-  /* line 192, assets/sass/main.scss */
-  .banner-section__patterns {
-    background-image: url("../img/pattern1.png"), url("../img/pattern2.png");
-    animation: pattern 10s linear infinite;
-    height: 500px;
-    position: relative;
-    top: 0;
-    left: 0; }
-
 @keyframes pattern {
   100% {
     background-position: -300px 1000px, 400px 400px, 300px 300px; }
@@ -164,3 +17,282 @@ li {
   100% {
     transform: perspective(0) rotateY(0deg);
     opacity: 1; } }
+
+/**
+ * Set up a decent box model on the root element
+ */
+/* line 10, assets/sass/base/_base.scss */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+/* line 20, assets/sass/base/_base.scss */
+html {
+  font-size: 62.5%; }
+
+/* line 25, assets/sass/base/_base.scss */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(102, 102, 102, 0.85);
+  box-sizing: border-box; }
+
+/**
+ * Basic styles for links
+ */
+/* line 36, assets/sass/base/_base.scss */
+a {
+  color: #f9a629;
+  text-decoration: none;
+  color: rgba(102, 102, 102, 0.85);
+  text-decoration: none; }
+
+/* line 1, assets/sass/base/_reset.scss */
+.newsletter {
+  visibility: hidden; }
+
+/* line 5, assets/sass/base/_reset.scss */
+.active {
+  visibility: visible;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.732);
+  z-index: 999;
+  width: 100%;
+  transition: all .2s ease-in;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+/* line 6, assets/sass/layout/_header.scss */
+.banner-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative; }
+  /* line 16, assets/sass/layout/_header.scss */
+  .banner-section .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  /* line 25, assets/sass/layout/_header.scss */
+  .banner-section .flip-text {
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: 1s;
+    animation-timing-function: linear;
+    backface-visibility: hidden;
+    animation-fill-mode: both; }
+    /* line 34, assets/sass/layout/_header.scss */
+    .banner-section .flip-text__alt-text {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3.2rem;
+      line-height: 3.2rem;
+      color: #fff;
+      font-weight: 400; }
+    /* line 42, assets/sass/layout/_header.scss */
+    .banner-section .flip-text__title {
+      color: #f9a629;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 15px 0;
+      letter-spacing: .05rem; }
+      /* line 49, assets/sass/layout/_header.scss */
+      .banner-section .flip-text__title--large {
+        font-size: 9rem;
+        line-height: 9rem;
+        display: block;
+        margin-bottom: 1.1rem; }
+      /* line 56, assets/sass/layout/_header.scss */
+      .banner-section .flip-text__title--small {
+        font-size: 5.6rem;
+        line-height: 5.6rem;
+        margin-bottom: 1.1rem; }
+    /* line 64, assets/sass/layout/_header.scss */
+    .banner-section .flip-text__shopping-options {
+      margin-top: 3rem; }
+  /* line 73, assets/sass/layout/_header.scss */
+  .banner-section__patterns {
+    background-image: url("../img/pattern1.png"), url("../img/pattern2.png");
+    animation: pattern 10s linear infinite;
+    height: 500px;
+    position: relative;
+    top: 0;
+    left: 0; }
+
+/* line 2, assets/sass/layout/_navigation.scss */
+.site-header {
+  height: 8.4rem; }
+  /* line 5, assets/sass/layout/_navigation.scss */
+  .site-header #lightbox {
+    background: #f9a629;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block; }
+    /* line 16, assets/sass/layout/_navigation.scss */
+    .site-header #lightbox svg {
+      fill: #fff;
+      margin: .5rem; }
+  /* line 23, assets/sass/layout/_navigation.scss */
+  .site-header li {
+    display: inline-block;
+    padding: 0 1.5rem; }
+    /* line 30, assets/sass/layout/_navigation.scss */
+    .site-header li svg {
+      height: 2rem;
+      width: 2rem; }
+  /* line 36, assets/sass/layout/_navigation.scss */
+  .site-header .site-navigation {
+    display: flex;
+    align-items: center; }
+    /* line 40, assets/sass/layout/_navigation.scss */
+    .site-header .site-navigation__logo {
+      margin-right: 3rem; }
+    /* line 44, assets/sass/layout/_navigation.scss */
+    .site-header .site-navigation__menu {
+      flex: 1; }
+    /* line 48, assets/sass/layout/_navigation.scss */
+    .site-header .site-navigation a {
+      transition: all .2s;
+      color: rgba(102, 102, 102, 0.85);
+      font-weight: 600;
+      font-size: 1.35rem;
+      text-transform: uppercase; }
+  /* line 58, assets/sass/layout/_navigation.scss */
+  .site-header .site-user li {
+    padding: 0 3px; }
+    /* line 61, assets/sass/layout/_navigation.scss */
+    .site-header .site-user li:first-of-type {
+      margin-right: 1rem; }
+  /* line 67, assets/sass/layout/_navigation.scss */
+  .site-header .site-user__link--box {
+    border: 1px solid rgba(102, 102, 102, 0.85);
+    height: 2.6rem;
+    line-height: 2.6rem;
+    width: 2.6rem;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block; }
+
+/* line 1, assets/sass/layout/_forms.scss */
+.newsletter {
+  z-index: 999;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.2); }
+  /* line 5, assets/sass/layout/_forms.scss */
+  .newsletter .close-btn {
+    position: absolute;
+    right: 1.3rem;
+    top: .7rem; }
+  /* line 11, assets/sass/layout/_forms.scss */
+  .newsletter__form {
+    display: flex;
+    position: relative;
+    width: 55rem;
+    min-height: 40rem; }
+    /* line 17, assets/sass/layout/_forms.scss */
+    .newsletter__form--banner {
+      flex: 0 0 43%;
+      background: url(../img/sale-large.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right; }
+    /* line 25, assets/sass/layout/_forms.scss */
+    .newsletter__form--content {
+      background-color: #fff;
+      flex: 1;
+      padding: 2rem 3rem; }
+      /* line 30, assets/sass/layout/_forms.scss */
+      .newsletter__form--content p {
+        margin-top: 1.3rem; }
+      /* line 34, assets/sass/layout/_forms.scss */
+      .newsletter__form--content form {
+        margin-top: 4rem; }
+
+/* line 43, assets/sass/layout/_forms.scss */
+input {
+  background-color: #eee;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  width: 100%;
+  border-width: 0;
+  border-radius: 0;
+  color: #999;
+  font-size: 1.4rem;
+  padding: 1.6rem;
+  margin-bottom: 2rem; }
+  /* line 55, assets/sass/layout/_forms.scss */
+  input:focus {
+    outline: none;
+    border: none; }
+
+/* line 62, assets/sass/layout/_forms.scss */
+.form-position {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+
+/* line 1, assets/sass/components/_buttons.scss */
+.button {
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: .03em;
+  outline: none;
+  width: 100%; }
+
+/* line 12, assets/sass/components/_buttons.scss */
+.button.wt-outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-top: .76rem;
+  transition: all .2s ease; }
+  /* line 17, assets/sass/components/_buttons.scss */
+  .button.wt-outline:not(:last-child) {
+    margin-right: 1.52rem; }
+  /* line 24, assets/sass/components/_buttons.scss */
+  .button.wt-outline:hover, .button.wt-outline:active {
+    background: #fff;
+    color: rgba(102, 102, 102, 0.85); }
+
+/* line 31, assets/sass/components/_buttons.scss */
+.pr-fill {
+  background-color: #f9a629;
+  border: 2px solid #f9a629;
+  padding: .7rem 2rem; }
+
+/* line 1, assets/sass/components/_container.scss */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1080px; }
+
+@media (min-width: 992px) {
+  /* line 11, assets/sass/components/_container.scss */
+  .container {
+    width: 970px; } }
+
+/* line 1, assets/sass/pages/_home.scss */
+.intro-section {
+  margin-top: 3rem; }
+  /* line 5, assets/sass/pages/_home.scss */
+  .intro-section .lzs-rows {
+    display: flex;
+    justify-content: space-between; }
+    /* line 8, assets/sass/pages/_home.scss */
+    .intro-section .lzs-rows__column {
+      flex: 0 32%;
+      height: 100%;
+      background-color: #f9a629; }
