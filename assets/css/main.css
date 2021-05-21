@@ -296,3 +296,15 @@ input {
       flex: 0 32%;
       height: 100%;
       background-color: #f9a629; }
+
+/* line 19, assets/sass/pages/_home.scss */
+.banner-layers {
+  text-align: center;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  /* line 26, assets/sass/pages/_home.scss */
+  .banner-layers__link {
+    color: #fff;
+    text-transform: uppercase; }

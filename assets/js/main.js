@@ -2,19 +2,19 @@
 
 // alert('hello world')
 // Newsletter Modal
-let newsLetter = document.querySelector('.newsletter')
-let closeBtn = document.querySelector('.close-btn')
+// let newsLetter = document.querySelector('.newsletter')
+// let closeBtn = document.querySelector('.close-btn')
 
-window.addEventListener('load', function () {
-    var newsLetterPopup = function () {
-        newsLetter.classList.toggle('active')
-    };
+// window.addEventListener('load', function () {
+//     var newsLetterPopup = function () {
+//         newsLetter.classList.toggle('active')
+//     };
     
-    setTimeout(newsLetterPopup, 3000);
-})
+//     setTimeout(newsLetterPopup, 8000);
+// })
 
-closeBtn.addEventListener('click', function() {
-    newsLetter.classList.remove('active')
-})
+// closeBtn.addEventListener('click', function() {
+//     newsLetter.classList.remove('active')
+// })
 
 
