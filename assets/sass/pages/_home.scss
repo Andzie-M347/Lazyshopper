@@ -1,16 +1,17 @@
 .intro-section {
     margin-top: 3rem;
-   
+
 
     .lzs-rows {
         display: flex;
         justify-content: space-between;
+
         &__column {
-           flex: 0 32%;
-           height: 100%;
-           background-color: $accent-color;
+            flex: 0 32%;
+            height: 100%;
+            background-color: $accent-color;
         }
-       
+
     }
 }
 
@@ -27,5 +28,27 @@
         color: $white;
         text-transform: uppercase;
         // line-height: 16rem;
+    }
+}
+
+
+// WEEKLY PRODUCTS
+
+.weekly-products {
+    padding: 3rem 0;
+
+    &__title {
+        text-transform: uppercase;
+        color: $text-color-dark;
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px solid $light-grey;
+        line-height: 0.1em;
+        margin: 1rem 0 2rem;
+
+        span {
+            background: $white;
+            padding: 0 1rem;
+        }
     }
 }

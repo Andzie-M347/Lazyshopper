@@ -240,6 +240,37 @@ input {
   top: 50%;
   transform: translate(-50%, -50%); }
 
+/* line 7, assets/sass/layout/_footer.scss */
+.site-footer__copyrights {
+  background-color: #5B5B5B;
+  padding: 1rem 0 1.5rem;
+  color: #eee; }
+  /* line 14, assets/sass/layout/_footer.scss */
+  .site-footer__copyrights--payment-methods .payment-icon {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    opacity: .6;
+    transition: opacity .3s;
+    border-radius: 5px;
+    padding-bottom: 0;
+    padding: 3px 5px 5px;
+    margin: 3px 3px 0; }
+    /* line 25, assets/sass/layout/_footer.scss */
+    .site-footer__copyrights--payment-methods .payment-icon:hover {
+      opacity: 1; }
+  /* line 31, assets/sass/layout/_footer.scss */
+  .site-footer__copyrights--payment-methods svg {
+    height: 2rem;
+    width: auto;
+    fill: #fff;
+    vertical-align: middle; }
+
+/* line 40, assets/sass/layout/_footer.scss */
+.site-footer .container {
+  display: flex;
+  justify-content: space-between; }
+
 /* line 1, assets/sass/components/_buttons.scss */
 .button {
   padding: .5rem 2rem;
@@ -291,20 +322,37 @@ input {
   .intro-section .lzs-rows {
     display: flex;
     justify-content: space-between; }
-    /* line 8, assets/sass/pages/_home.scss */
+    /* line 9, assets/sass/pages/_home.scss */
     .intro-section .lzs-rows__column {
       flex: 0 32%;
       height: 100%;
       background-color: #f9a629; }
 
-/* line 19, assets/sass/pages/_home.scss */
+/* line 20, assets/sass/pages/_home.scss */
 .banner-layers {
   text-align: center;
   height: 16rem;
   display: flex;
   align-items: center;
   justify-content: center; }
-  /* line 26, assets/sass/pages/_home.scss */
+  /* line 27, assets/sass/pages/_home.scss */
   .banner-layers__link {
     color: #fff;
     text-transform: uppercase; }
+
+/* line 37, assets/sass/pages/_home.scss */
+.weekly-products {
+  padding: 3rem 0; }
+  /* line 40, assets/sass/pages/_home.scss */
+  .weekly-products__title {
+    text-transform: uppercase;
+    color: #555;
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    line-height: 0.1em;
+    margin: 1rem 0 2rem; }
+    /* line 49, assets/sass/pages/_home.scss */
+    .weekly-products__title span {
+      background: #fff;
+      padding: 0 1rem; }
