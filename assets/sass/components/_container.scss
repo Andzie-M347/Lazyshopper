@@ -3,12 +3,12 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 1080px;
+
 }
 
 
 @media (min-width: 992px) {
     .container {
-        width: 970px;
-     }
+        max-width: 1080px;
+    }
 }

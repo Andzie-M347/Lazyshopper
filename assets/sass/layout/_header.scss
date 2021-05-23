@@ -4,18 +4,15 @@
 
 // BANNER SECTION
 .banner-section {
-    // padding-top: 500px;
-     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .6)), url(../img/internet-banking-ecommerce-concept-happy-young-smiling-female-with-afro-hairstyle-uses-modern-cell-phone-credit-card-online-shopping-min.jpg);
     // z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
-    position: relative;
-    // height: 500px;
 
     .content {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
@@ -24,15 +21,15 @@
     // Content
     .flip-text {
         animation-name: spin;
-        animation-duration: 1500ms; 
+        animation-duration: 1500ms;
         animation-iteration-count: 1s;
         animation-timing-function: linear;
         backface-visibility: hidden;
         animation-fill-mode: both;
-        
+
 
         &__alt-text {
-            font-family: 'Dancing Script', cursive;  
+            font-family: 'Dancing Script', cursive;
             font-size: 3.2rem;
             line-height: 3.2rem;
             color: #fff;
@@ -66,22 +63,18 @@
         }
 
 
-     
+
     }
 
 
     &__patterns {
         background-image: url("../img/pattern1.png"),
-        url("../img/pattern2.png");
+            url("../img/pattern2.png");
         animation: pattern 10s linear infinite;
-        // background-color: red;
-        height: 500px;
-
-        position: relative;
+        height: 50rem;
+        // position: relative;
         top: 0;
         left: 0;
 
     }
 }
-
-
