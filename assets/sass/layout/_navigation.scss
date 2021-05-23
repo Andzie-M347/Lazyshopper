@@ -1,4 +1,3 @@
-
 .site-header {
     height: 8.4rem;
 
@@ -6,11 +5,11 @@
         background: $accent-color;
         width: 32px;
         height: 32px;
-       vertical-align: middle;
+        vertical-align: middle;
         text-align: center;
         border-radius: 50%;
         display: inline-block;
-        
+
 
 
         svg {
@@ -24,8 +23,8 @@
         display: inline-block;
         padding: 0 1.5rem;
 
-        
-    
+
+
 
         svg {
             height: 2rem;
@@ -56,22 +55,23 @@
 
     .site-user {
         li {
-            padding: 0 3px;
+            padding: 0 .7rem;
 
-            &:first-of-type {
-                margin-right: 1rem;
-            }
         }
 
         &__link {
-            &--box {
-                border: 1px solid $text-color-light;
-                height: 2.6rem;
-                line-height: 2.6rem;
-                width: 2.6rem;
-                border-radius: 50%;
-                text-align: center;
-                display: inline-block;
+            &--icon {
+                margin-right: .8rem;
+                fill: $text-color-light;
+            }
+
+        }
+
+        .dropdown {
+            svg {
+                width: 1.35rem;
+                height: 1.35rem;
+                fill: $text-color-light;
             }
         }
     }
