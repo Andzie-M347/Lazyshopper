@@ -180,24 +180,78 @@ a {
     .site-header .site-navigation__menu {
       flex: 1; }
     /* line 47, assets/sass/layout/_navigation.scss */
-    .site-header .site-navigation a {
+    .site-header .site-navigation a,
+    .site-header .site-navigation .dropdown-button {
       transition: all .2s;
       color: rgba(102, 102, 102, 0.85);
       font-weight: 600;
       font-size: 1.35rem;
-      text-transform: uppercase; }
-  /* line 57, assets/sass/layout/_navigation.scss */
+      text-transform: uppercase;
+      cursor: pointer; }
+  /* line 59, assets/sass/layout/_navigation.scss */
   .site-header .site-user li {
     padding: 0 .7rem; }
-  /* line 63, assets/sass/layout/_navigation.scss */
+  /* line 65, assets/sass/layout/_navigation.scss */
   .site-header .site-user__link--icon {
     margin-right: .8rem;
     fill: rgba(102, 102, 102, 0.85); }
-  /* line 71, assets/sass/layout/_navigation.scss */
+  /* line 73, assets/sass/layout/_navigation.scss */
   .site-header .site-user .dropdown svg {
     width: 1.35rem;
     height: 1.35rem;
     fill: rgba(102, 102, 102, 0.85); }
+
+/* line 86, assets/sass/layout/_navigation.scss */
+.dropdown-button {
+  position: relative; }
+  /* line 90, assets/sass/layout/_navigation.scss */
+  .dropdown-button.open .dropdown-button__list {
+    display: flex; }
+  /* line 95, assets/sass/layout/_navigation.scss */
+  .dropdown-button__list {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    padding: 0.75rem;
+    position: absolute;
+    background-color: #fff;
+    min-width: 15rem;
+    right: 0;
+    display: none;
+    margin-top: 3rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 999; }
+    /* line 111, assets/sass/layout/_navigation.scss */
+    .dropdown-button__list .login-btn {
+      background-color: #f9a629;
+      color: #fff !important;
+      border-radius: 59rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      box-shadow: 0 9px 8px rgba(0, 0, 0, 0.03), 0 5px 2px rgba(0, 0, 0, 0.02); }
+      /* line 120, assets/sass/layout/_navigation.scss */
+      .dropdown-button__list .login-btn:hover, .dropdown-button__list .login-btn:active {
+        background-color: #f9a526; }
+      /* line 125, assets/sass/layout/_navigation.scss */
+      .dropdown-button__list .login-btn--inverse {
+        color: #f9a629 !important;
+        text-align: center; }
+        /* line 129, assets/sass/layout/_navigation.scss */
+        .dropdown-button__list .login-btn--inverse:hover, .dropdown-button__list .login-btn--inverse:active {
+          background-color: rgba(249, 166, 41, 0.5);
+          border-radius: 59rem; }
+    /* line 138, assets/sass/layout/_navigation.scss */
+    .dropdown-button__list span {
+      text-align: center; }
+    /* line 143, assets/sass/layout/_navigation.scss */
+    .dropdown-button__list a {
+      padding: .75rem;
+      font-size: 1.25rem !important;
+      text-transform: capitalize !important;
+      font-weight: 400 !important; }
+      /* line 150, assets/sass/layout/_navigation.scss */
+      .dropdown-button__list a:hover, .dropdown-button__list a:active {
+        background-color: #eee; }
 
 /* line 1, assets/sass/layout/_forms.scss */
 .newsletter {

@@ -82,3 +82,40 @@ function scrollToTop() {
     behavior: "smooth"
   });
 }
+
+
+// Dropdown menu
+(function(){
+  var elements = document.querySelectorAll(".dropdown-button");
+
+  function openDropdown(event){
+    event.target.parentNode.classList.add("open");
+  }
+
+  function resetDropdowns(){
+    var element = document.querySelector(".dropdown-button.open");
+    if(element){ element.classList.remove("open"); }
+  }
+
+  function documentHandler(){
+    resetDropdowns();
+    document.removeEventListener('click', documentHandler , false); 
+  };
+
+  if(elements.length>0){
+    elements.forEach(el=>{
+      el.addEventListener('click',function(e){
+        var isActive = e.target.parentNode.classList.contains("open");
+        resetDropdowns();
+        if (isActive) {
+          return;
+        }
+        e.stopPropagation();
+        e.preventDefault();
+        openDropdown(e);
+        document.addEventListener('click', documentHandler, false); 
+      }, false);
+    })
+  }
+
+})()

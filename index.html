@@ -47,39 +47,66 @@
                 </div><!-- ./Navigation menu -->
                 <div class="site-user">
                     <ul>
-
-                        <li>
-                            <a href="javascript:;" class="site-user__link">
+                        <li class="site-user__list">
+                            <div class="dropdown-button">
                                 <svg class="site-user__link--icon">
                                     <use href="assets/fonts/sprides1.0.svg#icon-profile-male"></use>
                                 </svg>
-
-                                Login
-
+                                <span class="login-btn">Login</span>
                                 <span class="dropdown">
                                     <svg class="site-user__link--icon">
                                         <use href="assets/fonts/symbol-defs.svg#icon-chevron-thin-down"></use>
                                     </svg>
                                 </span>
-                            </a>
 
-                        </li>
+                                <div class="dropdown-button__list">
+                                    <a href="javascript:;" class="login-btn">
+                                        Login
+                                    </a>
 
-                        <li>
-                            <a href="javascript:;" class="site-user__link">
+                                    <span> OR </span>
+
+                                    <a href="javascript:;" class="login-btn--inverse">
+                                        create account
+                                    </a>
+                                    <a href="javascript:;">
+                                        <svg class="site-user__link--icon">
+                                            <use href="assets/fonts/sprides1.0.svg#icon-profile-female"></use>
+                                        </svg>
+                                        account
+                                    </a>
+                                    <a href="javascript:;">
+                                        <svg class="site-user__link--icon">
+                                            <use href="assets/fonts/sprides1.0.svg#icon-heart"></use>
+                                        </svg>
+                                        Wishlist
+                                    </a>
+                                </div>
+                            </div><!-- ./dropdown menu -->
+                        </li><!-- ./user list item-->
+
+                        <li class="site-user__list">
+
+
+                            <div class="dropdown-button">
                                 <svg class="site-user__link--icon">
                                     <use href="assets/fonts/symbol-defs.svg#icon-help_outline"></use>
                                 </svg>
-
-                                help
-
+                                <span class="login-btn">Help</span>
                                 <span class="dropdown">
                                     <svg class="site-user__link--icon">
                                         <use href="assets/fonts/symbol-defs.svg#icon-chevron-thin-down"></use>
                                     </svg>
                                 </span>
-                            </a>
 
+                                <div class="dropdown-button__list">
+                                    <a href="javascript:;" >how to shop</a> 
+                                    <a href="javascript:;" >contact us</a> 
+                                    <a href="javascript:;" >payment methods</a> 
+                                    <a href="javascript:;" >support center</a> 
+                                    <a href="javascript:;" >track order</a> 
+                                </div>
+                            </div><!-- ./dropdown menu -->
                         </li>
                         <li>
                             <a href="javascript:;" class="site-user__link">
@@ -91,14 +118,6 @@
                                 cart
                             </a>
                         </li>
-                        <!-- <li>
-                            <a href="javascript:;" class="site-user__link">
-                                <svg>
-                                    <use href="assets/fonts/sprides1.0.svg#icon-heart"></use>
-                                </svg>
-                                <span class="items-count">0</span>
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
             </nav>
