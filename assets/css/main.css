@@ -483,7 +483,7 @@ input {
 /* line 57, assets/sass/pages/_home.scss */
 .weekly-products,
 .best-selling {
-  padding: 3rem 0; }
+  padding: 2rem 0; }
   /* line 61, assets/sass/pages/_home.scss */
   .weekly-products__title,
   .best-selling__title {
@@ -570,3 +570,55 @@ input {
     .weekly-products .product:hover .product__caption--quick-view,
     .best-selling .product:hover .product__caption--quick-view {
       opacity: 1; }
+
+/* line 174, assets/sass/pages/_home.scss */
+.call-to-action {
+  margin: 3rem 0;
+  padding-bottom: 2rem; }
+  /* line 180, assets/sass/pages/_home.scss */
+  .call-to-action .categories__clothing, .call-to-action .categories__personal-care {
+    min-height: 25rem;
+    position: relative; }
+  /* line 187, assets/sass/pages/_home.scss */
+  .call-to-action .categories__clothing {
+    background: url(../img/clothing.jpg);
+    background-size: cover;
+    position: relative; }
+    /* line 194, assets/sass/pages/_home.scss */
+    .call-to-action .categories__clothing .categories__title {
+      position: absolute;
+      left: 3rem;
+      top: 3rem; }
+  /* line 203, assets/sass/pages/_home.scss */
+  .call-to-action .categories__personal-care {
+    background: url(../img/personal-care.jpg);
+    background-size: cover;
+    position: relative; }
+    /* line 210, assets/sass/pages/_home.scss */
+    .call-to-action .categories__personal-care .categories__title {
+      position: absolute;
+      left: 3rem;
+      top: 3rem; }
+  /* line 218, assets/sass/pages/_home.scss */
+  .call-to-action .categories__decorative-lights {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/decorative-lights.jpg);
+    min-height: 51rem;
+    background-size: cover;
+    position: relative; }
+    /* line 226, assets/sass/pages/_home.scss */
+    .call-to-action .categories__decorative-lights .categories__title {
+      position: absolute;
+      left: 3rem;
+      top: 3rem; }
+  /* line 234, assets/sass/pages/_home.scss */
+  .call-to-action .categories__title {
+    padding: .45rem 2.75rem;
+    background-color: #f9a629;
+    color: #fff;
+    border-radius: 6rem;
+    text-transform: capitalize;
+    font-weight: 500; }
+
+/* line 249, assets/sass/pages/_home.scss */
+.bestselling-products {
+  margin: 3rem 0; }
