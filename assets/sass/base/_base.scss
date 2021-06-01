@@ -44,3 +44,18 @@ a {
 .tns-nav {
     display: none !important;
 }
+
+
+// Overlay 
+
+.search-feature {
+    &__overlay {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: .65;
+        z-index: 99999999;
+    }
+}

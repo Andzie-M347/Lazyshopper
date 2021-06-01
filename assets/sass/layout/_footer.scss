@@ -5,6 +5,29 @@
 
 .site-footer {
 
+    input[type=text],
+    input[type=email] {
+        box-sizing: border-box;
+
+        padding: 0 .75em;
+        height: 2.507em;
+        font-size: .97em;
+        border-radius: 0;
+        max-width: 100%;
+        width: 100%;
+        vertical-align: middle;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-color: rgba(255, 255, 255, 0.09);
+        color: $white;
+        border-radius: 5px;
+
+        &::placeholder {
+            color: $white !important;
+        }
+
+
+    }
+
     &__main {
 
         display: grid;
@@ -13,21 +36,50 @@
         color: $light-grey;
 
         .content {
+
+            padding: 0 1.5rem;
+
             &__title {
                 text-transform: uppercase;
                 font-weight: 600;
                 margin-bottom: 1rem;
             }
 
-            &__social-media {
+            &__tags {
+                font-size: 0.8em !important;
+                display: inline-block;
+                border: 1px solid currentColor;
+                opacity: .8;
+                margin: 0 3px 5px 0;
+                padding: 2px 5px;
+                border-radius: 3px;
+                color: $light-grey;
 
+                &:hover,
+                &:active {
+                    background-color: $accent-color;
+                    border-color: $accent-color;
+                }
+            }
+
+            &__social-media {
+                display: inline;
 
                 &--icon {
+                    height: 3.25rem;
+                    width: 3.25rem;
                     display: inline-block;
+                    line-height: 3.25rem;
+                    border: 2px solid $light-grey;
+                    border-radius: 50%;
+                    text-align: center;
+                    // margin: 0 .2rem;
+
 
                     svg {
                         fill: $light-grey;
                         height: 2rem;
+                        width: 2rem;
                     }
                 }
 
@@ -44,7 +96,7 @@
 
         &--payment-methods {
             .payment-icon {
-                display: inline-block;
+                display: inline-block !important;
                 background-color: rgba(255, 255, 255, 0.1);
                 display: inline-block;
                 opacity: .6;
