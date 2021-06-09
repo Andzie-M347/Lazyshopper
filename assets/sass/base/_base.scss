@@ -23,7 +23,7 @@ html {
 
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: $text-font-stack;
     font-size: 1.5rem;
     color: $text-color-light;
     box-sizing: border-box;
@@ -38,6 +38,22 @@ a {
     text-decoration: none;
     color: $text-color-light;
     text-decoration: none;
+
+    &:hover,
+    &:active {
+        color: $dark;
+    }
+
+}
+
+
+ul {
+    padding-left: unset;
+}
+
+
+li {
+    list-style: none;
 }
 
 // Slider Reset

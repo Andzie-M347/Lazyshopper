@@ -9,6 +9,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    position: relative;
 
     .content {
         position: absolute;
@@ -29,14 +30,15 @@
 
 
         &__alt-text {
-            font-family: 'Dancing Script', cursive;
+            font-family: $alternative-font;
             font-size: 3.2rem;
             line-height: 3.2rem;
             color: #fff;
-            font-weight: 400;
+            font-weight: 700;
         }
 
         &__title {
+            font-family: $text-font-stack;
             color: $accent-color;
             text-transform: uppercase;
             font-weight: 700;

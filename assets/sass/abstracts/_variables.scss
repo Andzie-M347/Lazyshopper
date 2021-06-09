@@ -9,16 +9,26 @@ $text-color-light: rgba(102, 102, 102, 0.85);
 $text-color-dark: #555;
 $white: #fff;
 $light-grey: #eee;
+$dark: #232323;
 
 
 /// Breakpoints map
 
-$breakpoints: (
-  'small': 320px,
+$breakpoints: ('small': 320px,
   'medium': 768px,
   'large': 1024px,
 ) !default;
 
+
+// Fonts
+/// @type Fonts
+
+$header-font-stack: 'Work Sans',
+sans-serif;
+$text-font-stack: 'Work Sans',
+sans-serif;
+$alternative-font: 'Dancing Script',
+cursive;
 
 
 /// @type String

@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
 @keyframes pattern {
   100% {
     background-position: -300px 1000px, 400px 400px, 300px 300px; }
@@ -35,7 +34,7 @@ html {
 
 /* line 25, assets/sass/base/_base.scss */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   color: rgba(102, 102, 102, 0.85);
   box-sizing: border-box; }
@@ -49,12 +48,23 @@ a {
   text-decoration: none;
   color: rgba(102, 102, 102, 0.85);
   text-decoration: none; }
+  /* line 42, assets/sass/base/_base.scss */
+  a:hover, a:active {
+    color: #232323; }
 
-/* line 44, assets/sass/base/_base.scss */
+/* line 50, assets/sass/base/_base.scss */
+ul {
+  padding-left: unset; }
+
+/* line 55, assets/sass/base/_base.scss */
+li {
+  list-style: none; }
+
+/* line 60, assets/sass/base/_base.scss */
 .tns-nav {
   display: none !important; }
 
-/* line 52, assets/sass/base/_base.scss */
+/* line 68, assets/sass/base/_base.scss */
 .search-feature__overlay {
   position: fixed;
   left: 0;
@@ -80,20 +90,51 @@ a {
   top: 0;
   left: 0; }
 
+@font-face {
+  font-family: 'Lato';
+  src: url("../../fonts/Lato/Lato-Thin.ttf") format("ttf");
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../../fonts/Lato/Lato-Regular.ttf") format("ttf");
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../../fonts/Lato/Lato-Bold.ttf") format("ttf");
+  font-weight: 500; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../../fonts/Lato/Lato-Semibold.ttf") format("ttf");
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../../fonts/Lato/Lato-Bold.ttf") format("ttf");
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../../fonts/Lato/Lato-Black.ttf") format("ttf");
+  font-weight: 900; }
+
 /* line 6, assets/sass/layout/_header.scss */
 .banner-section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/bg-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom; }
-  /* line 13, assets/sass/layout/_header.scss */
+  background-position: bottom;
+  position: relative; }
+  /* line 14, assets/sass/layout/_header.scss */
   .banner-section .content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
-  /* line 22, assets/sass/layout/_header.scss */
+  /* line 23, assets/sass/layout/_header.scss */
   .banner-section .flip-text {
     animation-name: spin;
     animation-duration: 1500ms;
@@ -101,35 +142,36 @@ a {
     animation-timing-function: linear;
     backface-visibility: hidden;
     animation-fill-mode: both; }
-    /* line 31, assets/sass/layout/_header.scss */
+    /* line 32, assets/sass/layout/_header.scss */
     .banner-section .flip-text__alt-text {
-      font-family: 'Dancing Script', cursive;
+      font-family: "Dancing Script", cursive;
       font-size: 3.2rem;
       line-height: 3.2rem;
       color: #fff;
-      font-weight: 400; }
-    /* line 39, assets/sass/layout/_header.scss */
+      font-weight: 700; }
+    /* line 40, assets/sass/layout/_header.scss */
     .banner-section .flip-text__title {
+      font-family: "Work Sans", sans-serif;
       color: #f9a629;
       text-transform: uppercase;
       font-weight: 700;
       margin: 15px 0;
       letter-spacing: .05rem; }
-      /* line 46, assets/sass/layout/_header.scss */
+      /* line 48, assets/sass/layout/_header.scss */
       .banner-section .flip-text__title--large {
         font-size: 9rem;
         line-height: 9rem;
         display: block;
         margin-bottom: 1.1rem; }
-      /* line 53, assets/sass/layout/_header.scss */
+      /* line 55, assets/sass/layout/_header.scss */
       .banner-section .flip-text__title--small {
         font-size: 5.6rem;
         line-height: 5.6rem;
         margin-bottom: 1.1rem; }
-    /* line 61, assets/sass/layout/_header.scss */
+    /* line 63, assets/sass/layout/_header.scss */
     .banner-section .flip-text__shopping-options {
       margin-top: 3rem; }
-  /* line 70, assets/sass/layout/_header.scss */
+  /* line 72, assets/sass/layout/_header.scss */
   .banner-section__patterns {
     background-image: url("../img/pattern1.png"), url("../img/pattern2.png");
     animation: pattern 10s linear infinite;
@@ -137,7 +179,7 @@ a {
     top: 0;
     left: 0; }
 
-/* line 83, assets/sass/layout/_header.scss */
+/* line 85, assets/sass/layout/_header.scss */
 .site-header.fixed {
   position: fixed;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
@@ -194,9 +236,9 @@ a {
     .site-header .site-navigation .dropdown-button {
       transition: all .2s;
       color: rgba(102, 102, 102, 0.85);
-      font-weight: 600;
-      font-size: 1.35rem;
-      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1.45rem;
+      text-transform: capitalize;
       cursor: pointer; }
   /* line 59, assets/sass/layout/_navigation.scss */
   .site-header .site-user li {
@@ -556,118 +598,47 @@ input {
     .best-selling__title span {
       background: #fff;
       padding: 0 1rem; }
-  /* line 78, assets/sass/pages/_home.scss */
-  .weekly-products .product,
-  .best-selling .product {
-    margin-top: 3rem; }
-    /* line 81, assets/sass/pages/_home.scss */
-    .weekly-products .product__figure,
-    .best-selling .product__figure {
-      position: relative; }
-      /* line 84, assets/sass/pages/_home.scss */
-      .weekly-products .product__figure img,
-      .best-selling .product__figure img {
-        border: 3px solid #ccc !important; }
-    /* line 92, assets/sass/pages/_home.scss */
-    .weekly-products .product__caption--wishlist,
-    .best-selling .product__caption--wishlist {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      border: 2px solid #eee;
-      border-radius: 50%;
-      height: 3rem;
-      width: 3rem;
-      text-align: center;
-      padding-top: 3px;
-      opacity: 0;
-      transition: all .2s ease; }
-      /* line 106, assets/sass/pages/_home.scss */
-      .weekly-products .product__caption--wishlist svg,
-      .best-selling .product__caption--wishlist svg {
-        fill: #eee;
-        height: 2rem;
-        width: 2rem; }
-    /* line 113, assets/sass/pages/_home.scss */
-    .weekly-products .product__caption--quick-view,
-    .best-selling .product__caption--quick-view {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      padding: .4em 0 .5em;
-      font-weight: 700;
-      background-color: #f9a629;
-      width: 100%;
-      color: #fff;
-      text-transform: uppercase;
-      text-align: center;
-      opacity: 0;
-      transition: opacity .3s ease;
-      overflow: hidden; }
-    /* line 135, assets/sass/pages/_home.scss */
-    .weekly-products .product__title--cat,
-    .best-selling .product__title--cat {
-      opacity: .7;
-      text-transform: uppercase;
-      font-size: 1.1rem;
-      letter-spacing: .05em; }
-    /* line 142, assets/sass/pages/_home.scss */
-    .weekly-products .product__title--name,
-    .best-selling .product__title--name {
-      font-size: 1.4rem; }
-    /* line 146, assets/sass/pages/_home.scss */
-    .weekly-products .product__title--price,
-    .best-selling .product__title--price {
-      color: #000; }
-    /* line 158, assets/sass/pages/_home.scss */
-    .weekly-products .product:hover .product__caption--wishlist,
-    .best-selling .product:hover .product__caption--wishlist {
-      opacity: 1; }
-    /* line 162, assets/sass/pages/_home.scss */
-    .weekly-products .product:hover .product__caption--quick-view,
-    .best-selling .product:hover .product__caption--quick-view {
-      opacity: 1; }
 
-/* line 174, assets/sass/pages/_home.scss */
+/* line 82, assets/sass/pages/_home.scss */
 .call-to-action {
   margin: 3rem 0;
   padding-bottom: 2rem; }
-  /* line 180, assets/sass/pages/_home.scss */
+  /* line 88, assets/sass/pages/_home.scss */
   .call-to-action .categories__clothing, .call-to-action .categories__personal-care {
     min-height: 25rem;
     position: relative; }
-  /* line 187, assets/sass/pages/_home.scss */
+  /* line 95, assets/sass/pages/_home.scss */
   .call-to-action .categories__clothing {
     background: url(../img/clothing.jpg);
     background-size: cover;
     position: relative; }
-    /* line 194, assets/sass/pages/_home.scss */
+    /* line 102, assets/sass/pages/_home.scss */
     .call-to-action .categories__clothing .categories__title {
       position: absolute;
       left: 3rem;
       top: 3rem; }
-  /* line 203, assets/sass/pages/_home.scss */
+  /* line 111, assets/sass/pages/_home.scss */
   .call-to-action .categories__personal-care {
     background: url(../img/personal-care.jpg);
     background-size: cover;
     position: relative; }
-    /* line 210, assets/sass/pages/_home.scss */
+    /* line 118, assets/sass/pages/_home.scss */
     .call-to-action .categories__personal-care .categories__title {
       position: absolute;
       left: 3rem;
       top: 3rem; }
-  /* line 218, assets/sass/pages/_home.scss */
+  /* line 126, assets/sass/pages/_home.scss */
   .call-to-action .categories__decorative-lights {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/decorative-lights.jpg);
     min-height: 51rem;
     background-size: cover;
     position: relative; }
-    /* line 226, assets/sass/pages/_home.scss */
+    /* line 134, assets/sass/pages/_home.scss */
     .call-to-action .categories__decorative-lights .categories__title {
       position: absolute;
       left: 3rem;
       top: 3rem; }
-  /* line 234, assets/sass/pages/_home.scss */
+  /* line 142, assets/sass/pages/_home.scss */
   .call-to-action .categories__title {
     padding: .45rem 2.75rem;
     background-color: #f9a629;
@@ -676,6 +647,69 @@ input {
     text-transform: capitalize;
     font-weight: 500; }
 
-/* line 249, assets/sass/pages/_home.scss */
+/* line 157, assets/sass/pages/_home.scss */
 .bestselling-products {
   margin: 3rem 0; }
+
+/* line 1, assets/sass/pages/_product.scss */
+.product {
+  margin-top: 3rem; }
+  /* line 4, assets/sass/pages/_product.scss */
+  .product__figure {
+    position: relative; }
+    /* line 7, assets/sass/pages/_product.scss */
+    .product__figure img {
+      border: 3px solid #ccc !important; }
+  /* line 15, assets/sass/pages/_product.scss */
+  .product__caption--wishlist {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    text-align: center;
+    padding-top: 3px;
+    opacity: 0;
+    transition: all .2s ease; }
+    /* line 29, assets/sass/pages/_product.scss */
+    .product__caption--wishlist svg {
+      fill: #eee;
+      height: 2rem;
+      width: 2rem; }
+  /* line 36, assets/sass/pages/_product.scss */
+  .product__caption--quick-view {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: .4em 0 .5em;
+    font-weight: 700;
+    background-color: #f9a629;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .3s ease;
+    overflow: hidden; }
+  /* line 58, assets/sass/pages/_product.scss */
+  .product__title--cat {
+    opacity: .7;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .05em;
+    display: block; }
+  /* line 67, assets/sass/pages/_product.scss */
+  .product__title--name {
+    font-size: 1.4rem;
+    display: block; }
+  /* line 73, assets/sass/pages/_product.scss */
+  .product__title--price {
+    color: #232323; }
+  /* line 80, assets/sass/pages/_product.scss */
+  .product:hover .product__caption--wishlist {
+    opacity: 1; }
+  /* line 84, assets/sass/pages/_product.scss */
+  .product:hover .product__caption--quick-view {
+    opacity: 1; }
