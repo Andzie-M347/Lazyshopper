@@ -2,15 +2,45 @@
     visibility: hidden;
 }
 
-.active { 
+.active {
     visibility: visible;
     height: 100vh;
-    background:  rgba(0,0,0,.732);
+    background: rgba(0, 0, 0, .732);
     z-index: 999;
     width: 100%;
     transition: all .2s ease-in;
     position: fixed;
     top: 0;
     left: 0;
+
+}
+
+// Carousel
+
+#product-carousel-list {
+    display: block;
+}
+
+#product-carousel {
+
+    .splide__pagination,
+    .splide__arrows {
+        display: none;
+    }
+}
+
+#product-display {
+    .splide__pagination {
+        display: none;
+    }
+
+    .splide__arrow {
+        border-radius: 0 !important;
+        background: $dark !important;
+
+        svg {
+            fill: $accent-color;
+        }
+    }
 
 }

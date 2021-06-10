@@ -32,3 +32,60 @@
         }
     }
 }
+
+
+// Increment Button 
+
+.value-button {
+    display: inline-block;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    // background-color: red;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+#decrease {
+    margin-right: -4px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #ccc;
+
+}
+
+#increase {
+    margin-left: -4px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #ccc;
+}
+
+
+
+input#number {
+    text-align: center;
+    border: none;
+    background-color: $white;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+    line-height: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

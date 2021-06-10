@@ -90,6 +90,27 @@ li {
   top: 0;
   left: 0; }
 
+/* line 20, assets/sass/base/_reset.scss */
+#product-carousel-list {
+  display: block; }
+
+/* line 26, assets/sass/base/_reset.scss */
+#product-carousel .splide__pagination,
+#product-carousel .splide__arrows {
+  display: none; }
+
+/* line 33, assets/sass/base/_reset.scss */
+#product-display .splide__pagination {
+  display: none; }
+
+/* line 37, assets/sass/base/_reset.scss */
+#product-display .splide__arrow {
+  border-radius: 0 !important;
+  background: #232323 !important; }
+  /* line 41, assets/sass/base/_reset.scss */
+  #product-display .splide__arrow svg {
+    fill: #f9a629; }
+
 @font-face {
   font-family: 'Lato';
   src: url("../../fonts/Lato/Lato-Thin.ttf") format("ttf");
@@ -236,7 +257,7 @@ li {
     .site-header .site-navigation .dropdown-button {
       transition: all .2s;
       color: rgba(102, 102, 102, 0.85);
-      font-weight: 700;
+      font-weight: 600;
       font-size: 1.45rem;
       text-transform: capitalize;
       cursor: pointer; }
@@ -524,6 +545,56 @@ input {
       background: #fff;
       color: rgba(102, 102, 102, 0.85); }
 
+/* line 39, assets/sass/components/_buttons.scss */
+.value-button {
+  display: inline-block;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* line 56, assets/sass/components/_buttons.scss */
+.value-button:hover {
+  cursor: pointer; }
+
+/* line 60, assets/sass/components/_buttons.scss */
+#decrease {
+  margin-right: -4px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #ccc; }
+
+/* line 68, assets/sass/components/_buttons.scss */
+#increase {
+  margin-left: -4px;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #ccc; }
+
+/* line 77, assets/sass/components/_buttons.scss */
+input#number {
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  line-height: 10px; }
+
+/* line 87, assets/sass/components/_buttons.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 /* line 1, assets/sass/components/_container.scss */
 .container {
   margin-left: auto;
@@ -651,17 +722,21 @@ input {
 .bestselling-products {
   margin: 3rem 0; }
 
-/* line 1, assets/sass/pages/_product.scss */
-.product {
+/* line 3, assets/sass/pages/_product.scss */
+.product,
+.product-info {
   margin-top: 3rem; }
-  /* line 4, assets/sass/pages/_product.scss */
-  .product__figure {
+  /* line 7, assets/sass/pages/_product.scss */
+  .product__figure,
+  .product-info__figure {
     position: relative; }
-    /* line 7, assets/sass/pages/_product.scss */
-    .product__figure img {
+    /* line 10, assets/sass/pages/_product.scss */
+    .product__figure img,
+    .product-info__figure img {
       border: 3px solid #ccc !important; }
-  /* line 15, assets/sass/pages/_product.scss */
-  .product__caption--wishlist {
+  /* line 18, assets/sass/pages/_product.scss */
+  .product__caption--wishlist,
+  .product-info__caption--wishlist {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
@@ -673,13 +748,15 @@ input {
     padding-top: 3px;
     opacity: 0;
     transition: all .2s ease; }
-    /* line 29, assets/sass/pages/_product.scss */
-    .product__caption--wishlist svg {
+    /* line 32, assets/sass/pages/_product.scss */
+    .product__caption--wishlist svg,
+    .product-info__caption--wishlist svg {
       fill: #eee;
       height: 2rem;
       width: 2rem; }
-  /* line 36, assets/sass/pages/_product.scss */
-  .product__caption--quick-view {
+  /* line 39, assets/sass/pages/_product.scss */
+  .product__caption--quick-view,
+  .product-info__caption--quick-view {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -693,23 +770,122 @@ input {
     opacity: 0;
     transition: opacity .3s ease;
     overflow: hidden; }
-  /* line 58, assets/sass/pages/_product.scss */
-  .product__title--cat {
+  /* line 61, assets/sass/pages/_product.scss */
+  .product__title--cat,
+  .product-info__title--cat {
     opacity: .7;
     text-transform: uppercase;
     font-size: 1rem;
     letter-spacing: .05em;
     display: block; }
-  /* line 67, assets/sass/pages/_product.scss */
-  .product__title--name {
+  /* line 70, assets/sass/pages/_product.scss */
+  .product__title--name,
+  .product-info__title--name {
     font-size: 1.4rem;
     display: block; }
-  /* line 73, assets/sass/pages/_product.scss */
-  .product__title--price {
+  /* line 76, assets/sass/pages/_product.scss */
+  .product__title--price,
+  .product-info__title--price {
     color: #232323; }
-  /* line 80, assets/sass/pages/_product.scss */
-  .product:hover .product__caption--wishlist {
+  /* line 83, assets/sass/pages/_product.scss */
+  .product:hover .product__caption--wishlist,
+  .product-info:hover .product__caption--wishlist {
     opacity: 1; }
-  /* line 84, assets/sass/pages/_product.scss */
-  .product:hover .product__caption--quick-view {
+  /* line 87, assets/sass/pages/_product.scss */
+  .product:hover .product__caption--quick-view,
+  .product-info:hover .product__caption--quick-view {
     opacity: 1; }
+
+/* line 97, assets/sass/pages/_product.scss */
+.product-page {
+  background-color: #f5f5f5; }
+  /* line 100, assets/sass/pages/_product.scss */
+  .product-page .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  /* line 104, assets/sass/pages/_product.scss */
+  .product-page__header {
+    padding: 1rem 0 1.6rem;
+    font-size: 1.325rem; }
+    /* line 110, assets/sass/pages/_product.scss */
+    .product-page__header--breadcrumb .disabled-btn {
+      opacity: .6;
+      pointer-events: none;
+      color: #f9a629; }
+    /* line 120, assets/sass/pages/_product.scss */
+    .product-page__header--share svg {
+      height: 1.5rem;
+      width: 1.5rem;
+      fill: currentColor; }
+
+/* line 131, assets/sass/pages/_product.scss */
+.product-info {
+  margin-bottom: 4rem; }
+  /* line 136, assets/sass/pages/_product.scss */
+  .product-info__title {
+    color: #232323; }
+  /* line 140, assets/sass/pages/_product.scss */
+  .product-info__wishlist {
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    background-color: #f9a629;
+    text-align: center; }
+    /* line 149, assets/sass/pages/_product.scss */
+    .product-info__wishlist svg {
+      height: 2rem;
+      width: 2rem;
+      fill: #fff; }
+  /* line 157, assets/sass/pages/_product.scss */
+  .product-info__category {
+    opacity: .7;
+    text-transform: uppercase;
+    font-size: 1.105rem;
+    letter-spacing: .05em;
+    display: block; }
+  /* line 166, assets/sass/pages/_product.scss */
+  .product-info__rating {
+    display: flex; }
+    /* line 169, assets/sass/pages/_product.scss */
+    .product-info__rating li {
+      display: inline-block;
+      padding: 0 1px; }
+      /* line 173, assets/sass/pages/_product.scss */
+      .product-info__rating li:last-child {
+        margin-right: 1.5rem; }
+      /* line 177, assets/sass/pages/_product.scss */
+      .product-info__rating li svg {
+        width: 1.45rem;
+        height: 1.45rem;
+        fill: #FBB600; }
+    /* line 186, assets/sass/pages/_product.scss */
+    .product-info__rating span a {
+      font-size: 1.325rem;
+      color: #232323; }
+  /* line 192, assets/sass/pages/_product.scss */
+  .product-info__price {
+    margin-top: 3.25rem; }
+    /* line 195, assets/sass/pages/_product.scss */
+    .product-info__price h4 {
+      color: #232323;
+      font-size: 3.2rem;
+      font-weight: 700; }
+  /* line 203, assets/sass/pages/_product.scss */
+  .product-info__action {
+    display: flex;
+    align-items: center;
+    margin-top: 3.5rem; }
+    /* line 208, assets/sass/pages/_product.scss */
+    .product-info__action--quantity {
+      margin-right: 2rem; }
+    /* line 213, assets/sass/pages/_product.scss */
+    .product-info__action--add-to-cart svg {
+      width: 1.75rem;
+      height: 1.75rem;
+      fill: #fff; }
+    /* line 219, assets/sass/pages/_product.scss */
+    .product-info__action--add-to-cart button {
+      text-transform: capitalize; }

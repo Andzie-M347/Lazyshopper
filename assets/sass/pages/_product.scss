@@ -1,4 +1,7 @@
-.product {
+// Product Globally
+
+.product,
+.product-info {
     margin-top: 3rem;
 
     &__figure {
@@ -87,5 +90,136 @@
         }
 
 
+    }
+}
+
+// Product Page
+.product-page {
+    background-color: #f5f5f5;
+
+    .container {
+        @include flex-box(space-between, center);
+    }
+
+    &__header {
+        padding: 1rem 0 1.6rem;
+        font-size: 1.325rem;
+
+        &--breadcrumb {
+
+            .disabled-btn {
+                opacity: .6;
+                pointer-events: none;
+                color: $accent-color;
+
+            }
+        }
+
+
+        &--share {
+            svg {
+                height: 1.5rem;
+                width: 1.5rem;
+                fill: currentColor;
+            }
+        }
+    }
+}
+
+// Product Info
+
+.product-info {
+
+    margin-bottom: 4rem;
+
+
+    &__title {
+        color: $dark;
+    }
+
+    &__wishlist {
+        display: inline-block;
+        height: 3rem;
+        width: 3rem;
+        line-height: 3rem;
+        border-radius: 50%;
+        background-color: $accent-color;
+        text-align: center;
+
+        svg {
+            height: 2rem;
+            width: 2rem;
+            fill: $white;
+        }
+    }
+
+
+    &__category {
+        opacity: .7;
+        text-transform: uppercase;
+        font-size: 1.105rem;
+        letter-spacing: .05em;
+        display: block;
+    }
+
+
+    &__rating {
+        display: flex;
+
+        li {
+            display: inline-block;
+            padding: 0 1px;
+
+            &:last-child {
+                margin-right: 1.5rem;
+            }
+
+            svg {
+                width: 1.45rem;
+                height: 1.45rem;
+                fill: #FBB600;
+            }
+
+
+        }
+
+        span a {
+            font-size: 1.325rem;
+            color: $dark;
+        }
+    }
+
+    &__price {
+        margin-top: 3.25rem;
+
+        h4 {
+            color: $dark;
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+    }
+
+
+    &__action {
+        display: flex;
+        align-items: center;
+        margin-top: 3.5rem;
+
+        &--quantity {
+            margin-right: 2rem;
+        }
+
+        &--add-to-cart {
+            svg {
+                width: 1.75rem;
+                height: 1.75rem;
+                fill: $white;
+            }
+
+            button {
+                text-transform: capitalize;
+
+            }
+        }
     }
 }

@@ -27,3 +27,10 @@
     right: $horizontal;
     bottom: $vertical;
 }
+
+
+@mixin flex-box($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
