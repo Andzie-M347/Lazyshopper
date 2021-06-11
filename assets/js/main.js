@@ -131,6 +131,7 @@ let increment = document.querySelector('#increase');
 increment.addEventListener('click', function () {
   var value = parseInt(document.getElementById('number').value, 10);
   value = isNaN(value) ? 0 : value;
+  value == 10 ? value = 9 : '';
   value++;
   document.getElementById('number').value = value;
 });
