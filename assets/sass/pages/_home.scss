@@ -59,8 +59,8 @@
     padding: 2rem 0;
 
     &__title {
-        text-transform: uppercase;
-        color: $text-color-dark;
+        text-transform: capitalize;
+        color: $dark;
         width: 100%;
         text-align: center;
         border-bottom: 2px solid $light-grey;

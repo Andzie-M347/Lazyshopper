@@ -1,0 +1,84 @@
+// Global Tab 
+.lzs-tab {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__header {
+        background-color: $white;
+        display: flex;
+        flex-wrap: wrap;
+        padding: .375rem;
+        align-self: flex-start;
+        font-weight: 600;
+
+
+        li {
+            color: $text-color-dark;
+            cursor: pointer;
+            flex-grow: 1;
+            padding: .375rem 2rem .375rem 0;
+            font-size: 1.425rem;
+
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+
+
+    &__content {
+        display: flex;
+
+        &--tab {
+            padding: 1rem;
+            color: $text-color-dark;
+        }
+    }
+
+    .tab-header__inverse {
+        font-weight: 600;
+        color: $accent-color;
+
+        &::after {
+            content: '';
+            border-bottom: 2px solid $accent-color;
+            display: block;
+
+        }
+
+    }
+
+    .tab-header {
+        font-weight: 600;
+        border-bottom: none;
+        color: unset;
+
+        &::after {
+            display: none;
+        }
+    }
+
+
+
+    .tab-content {
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 0;
+        perspective: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-animation-duration: 300ms;
+        animation-duration: 300ms;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: slide-in;
+        animation-name: slide-in;
+        -webkit-animation-timing-function: cubic-bezier(.16, .69, .54, .92);
+        animation-timing-function: cubic-bezier(.16, .69, .54, .92);
+    }
+
+
+
+}

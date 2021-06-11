@@ -17,6 +17,16 @@
     transform: perspective(0) rotateY(0deg);
     opacity: 1; } }
 
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, 30px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+
 /**
  * Set up a decent box model on the root element
  */
@@ -143,10 +153,10 @@ li {
 
 /* line 6, assets/sass/layout/_header.scss */
 .banner-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/bg-image.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../img/sale-large.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   position: relative; }
   /* line 14, assets/sass/layout/_header.scss */
   .banner-section .content {
@@ -607,6 +617,90 @@ input[type=number]::-webkit-outer-spin-button {
   .container {
     max-width: 1080px; } }
 
+/* line 1, assets/sass/components/_card.scss */
+.lzs-card {
+  box-shadow: 0 2px 2px 0 rgba(77, 77, 79, 0.08), 0 0 2px 0 rgba(77, 77, 79, 0.16);
+  border-radius: 5px;
+  padding: 2rem 0; }
+  /* line 7, assets/sass/components/_card.scss */
+  .lzs-card header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: .8rem; }
+  /* line 12, assets/sass/components/_card.scss */
+  .lzs-card__title {
+    color: #232323; }
+  /* line 16, assets/sass/components/_card.scss */
+  .lzs-card__title,
+  .lzs-card .content {
+    padding-left: 1.6rem; }
+  /* line 21, assets/sass/components/_card.scss */
+  .lzs-card .content {
+    margin-top: 2rem; }
+
+/* line 2, assets/sass/components/_tab.scss */
+.lzs-tab {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  /* line 7, assets/sass/components/_tab.scss */
+  .lzs-tab__header {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    padding: .375rem;
+    align-self: flex-start;
+    font-weight: 600; }
+    /* line 16, assets/sass/components/_tab.scss */
+    .lzs-tab__header li {
+      color: #555;
+      cursor: pointer;
+      flex-grow: 1;
+      padding: .375rem 2rem .375rem 0;
+      font-size: 1.425rem; }
+      /* line 23, assets/sass/components/_tab.scss */
+      .lzs-tab__header li:hover {
+        color: #f9a629; }
+  /* line 30, assets/sass/components/_tab.scss */
+  .lzs-tab__content {
+    display: flex; }
+    /* line 33, assets/sass/components/_tab.scss */
+    .lzs-tab__content--tab {
+      padding: 1rem;
+      color: #555; }
+  /* line 39, assets/sass/components/_tab.scss */
+  .lzs-tab .tab-header__inverse {
+    font-weight: 600;
+    color: #f9a629; }
+    /* line 43, assets/sass/components/_tab.scss */
+    .lzs-tab .tab-header__inverse::after {
+      content: '';
+      border-bottom: 2px solid #f9a629;
+      display: block; }
+  /* line 52, assets/sass/components/_tab.scss */
+  .lzs-tab .tab-header {
+    font-weight: 600;
+    border-bottom: none;
+    color: unset; }
+    /* line 57, assets/sass/components/_tab.scss */
+    .lzs-tab .tab-header::after {
+      display: none; }
+  /* line 64, assets/sass/components/_tab.scss */
+  .lzs-tab .tab-content {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 0;
+    perspective: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-animation-duration: 300ms;
+    animation-duration: 300ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: slide-in;
+    animation-name: slide-in;
+    -webkit-animation-timing-function: cubic-bezier(0.16, 0.69, 0.54, 0.92);
+    animation-timing-function: cubic-bezier(0.16, 0.69, 0.54, 0.92); }
+
 /* line 1, assets/sass/pages/_home.scss */
 .intro-section {
   margin-top: 3rem; }
@@ -657,8 +751,8 @@ input[type=number]::-webkit-outer-spin-button {
   /* line 61, assets/sass/pages/_home.scss */
   .weekly-products__title,
   .best-selling__title {
-    text-transform: uppercase;
-    color: #555;
+    text-transform: capitalize;
+    color: #232323;
     width: 100%;
     text-align: center;
     border-bottom: 2px solid #eee;

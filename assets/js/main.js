@@ -21,35 +21,35 @@ let copyrightDate = document.querySelector('#copyright')
 copyrightDate.appendChild(document.createTextNode(new Date().getFullYear()))
 
 
-// var slider = tns({
-//   "responsive": {
-//     "1080": {
-//       "items": 4,
-//       "controls": true,
+var slider = tns({
+  "responsive": {
+    "1080": {
+      "items": 4,
+      "controls": true,
 
-//     },
-//     "500": {
-//       "items": 2
-//     }
-//   },
+    },
+    "500": {
+      "items": 2
+    }
+  },
 
-//   container: '.my-slider',
-//   slideBy: 'page',
-//   controls: true,
-//   mouseDrag: true,
-//   swipeAngle: false,
-//   gutter: 10
+  container: '.my-slider',
+  slideBy: 'page',
+  controls: true,
+  mouseDrag: true,
+  swipeAngle: false,
+  gutter: 10
 
-// });
+});
 
 
-// 
 
-// let prev = document.body.querySelector('[data-controls=prev]')
-// prev.innerHTML = `&larr;`
 
-// let next = document.body.querySelector('[data-controls=next]')
-// next.innerHTML = `&rarr;`
+let prev = document.body.querySelector('[data-controls=prev]')
+prev.innerHTML = `&larr;`
+
+let next = document.body.querySelector('[data-controls=next]')
+next.innerHTML = `&rarr;`
 
 // Sticky Header 
 window.addEventListener('scroll', function () {
@@ -184,3 +184,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+
+// Products Tab
+function tabify(element) {
+  const header = element.querySelector('.lzs-tab__header');
+  const content = element.querySelector('.lzs-tab__content');
+  const tab_headers = [...header.children];
+  const tab_contents = [...content.children];
+  tab_contents.forEach(x => x.style.display = 'none');
+  let current_tab_index = -1;
+
+  function setTab(index) {
+    if (current_tab_index > -1) {
+      tab_headers[current_tab_index].classList.add('tab-header');
+
+      tab_contents[current_tab_index].style.display = 'none';
+
+    }
+
+
+    // Tab header
+
+    tab_headers[index].classList.add('tab-header__inverse');
+    tab_headers[index].classList.remove('tab-header');
+
+
+    // Tab content
+    tab_contents[index].style.display = 'flex';
+    tab_contents[index].classList.add('tab-content');
+
+    current_tab_index = index;
+    
+  }
+
+  default_tab_index = tab_headers.findIndex(x => {
+    return [...x.classList].indexOf('active-tab') > -1;
+  });
+
+  default_tab_index = default_tab_index === -1 ? 0 : default_tab_index;
+  setTab(default_tab_index);
+  tab_headers.forEach((x, i) => x.onclick = event => setTab(i));
+}
+
+// this is where the magic happens!
+[...document.querySelectorAll('.lzs-tab')]
+.forEach(x => tabify(x));
